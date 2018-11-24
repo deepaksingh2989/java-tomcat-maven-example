@@ -1,20 +1,22 @@
 pipeline {
-  agent any
-  stages {
-    stage('Initiliaze') {
-      steps {
-        echo 'This is the first stage'
-
-      }
+    agent any
+    stages {
+        stage ('Initialize') {
+            steps {
+                echo  "Initializing the Code File"
+            }
+        }
+ 
+        stage ('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+ 
+         stage ('Deploy') {
+            steps {
+                echo 'Deployed an Artifact'
+            }
+        }
     }
-    stage('Build') {
-      steps {
-        echo 'Build Started'
-      }
-    }
-    stage('Deployment')
-    steps {
-      echo 'Welcome to the deployment Stage'
-    }
-  }
 }
